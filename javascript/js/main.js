@@ -392,3 +392,37 @@
 //     assert.strictEqual(boolToWord(false), 'No')
 //     });
 //   });
+
+//18. Task
+// You get an array of numbers, return the sum of all of the positives ones.
+// Example
+// [1, -4, 7, 12] => 1+7+12=20
+// Note
+// If there is nothing to sum, the sum is default to 0.
+
+// function positiveSum(arr) {
+//   let sumOfPossNums = 0
+//   for (let i = 0; arr.length >= i; i++) {
+//     if(arr[i] >= 0){
+//       sumOfPossNums += arr[i]
+//     }
+//   }
+//   return sumOfPossNums
+// }
+// function positiveSum(arr) {
+//   return arr.reduce((acc,val) => acc + (val > 0 ? b : 0), 0)
+// }
+
+// console.log(positiveSum([1, -4, 7, 12]))
+
+//19.Create a function that returns the sum of the two lowest positive numbers given an 
+//array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+//For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+//[10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+function sumTwoSmallestNumbers(numbers) {  
+  numbers.sort((a,b) => a -b)
+  return numbers[0] + numbers[1]
+}
+
+console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]))
