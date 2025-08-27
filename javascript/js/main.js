@@ -420,9 +420,69 @@
 //For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
 //[10, 343445353, 3453445, 3453545353453] should return 3453455.
 
-function sumTwoSmallestNumbers(numbers) {  
-  numbers.sort((a,b) => a -b)
-  return numbers[0] + numbers[1]
+// function sumTwoSmallestNumbers(numbers) {  
+//   numbers.sort((a,b) => a -b)
+//   return numbers[0] + numbers[1]
+// }
+
+// console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]))
+
+//20. You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+// Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+
+// function likes(names) {
+//   if(names.length > 3) {
+//     return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+//   } else if (names.length === 3) {
+//     return `${names[0]}, ${names[1]} and ${names[2]} like this`
+//   } else if (names.length < 3 && names.length >= 2) {
+//     return `${names[0]} and ${names[1]} like this`
+//   } else if (names.length < 2 && names.length > 0) {
+//     return `${names[0]} likes this`
+//   } else {
+//     return 'no one likes this'
+//   }
+// }
+
+// console.log(likes([]))
+
+//21. Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+// Numerical Score	Letter Grade
+// 90 <= score <= 100	'A'
+// 80 <= score < 90	'B'
+// 70 <= score < 80	'C'
+// 60 <= score < 70	'D'
+// 0 <= score < 60	'F'
+// Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
+
+// function getGrade (s1, s2, s3) {
+//   let grade = ""
+//   let totalAverage = (s1 + s2 + s3) / 3
+//   if(totalAverage >= 90 && totalAverage <= 100) {
+//     return grade = 'A'
+//   } else if(totalAverage >= 80 && totalAverage < 90) {
+//     return grade = 'B'
+//   } else if(totalAverage >= 70 && totalAverage < 80) {
+//     return grade = 'C'
+//   } else if(totalAverage >= 60 && totalAverage < 70) {
+//     return grade = 'D'
+//   } else if(totalAverage >= 0 && totalAverage < 60) {
+//     return grade = 'F'
+//   }
+// }
+
+function getGrade (s1, s2, s3) {
+  avg = (s1+s2+s3)/3
+  if (avg < 60) return 'F'
+  else if (avg < 70) return 'D'
+  else if (avg < 80) return 'C'
+  else if (avg < 90) return 'B'
+  else return 'A'
 }
 
-console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]))
+console.log(getGrade(45,60,53))
