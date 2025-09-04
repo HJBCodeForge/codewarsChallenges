@@ -476,13 +476,30 @@
 //   }
 // }
 
-function getGrade (s1, s2, s3) {
-  avg = (s1+s2+s3)/3
-  if (avg < 60) return 'F'
-  else if (avg < 70) return 'D'
-  else if (avg < 80) return 'C'
-  else if (avg < 90) return 'B'
-  else return 'A'
+// function getGrade (s1, s2, s3) {
+//   avg = (s1+s2+s3)/3
+//   if (avg < 60) return 'F'
+//   else if (avg < 70) return 'D'
+//   else if (avg < 80) return 'C'
+//   else if (avg < 90) return 'B'
+//   else return 'A'
+// }
+
+// console.log(getGrade(45,60,53))
+
+//22. Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
+
+// Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+// Example:
+
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
+
+function toJadenCase(str) {
+  let upperCaseStr = str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+  return upperCaseStr
 }
 
-console.log(getGrade(45,60,53))
+console.log(toJadenCase("How Can Mirrors Be Real If Our Eyes Aren't Real"))
