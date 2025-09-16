@@ -497,9 +497,24 @@
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 
-function toJadenCase(str) {
-  let upperCaseStr = str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-  return upperCaseStr
-}
+// function toJadenCase(str) {
+//   let upperCaseStr = str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+//   return upperCaseStr
+// }
 
-console.log(toJadenCase("How Can Mirrors Be Real If Our Eyes Aren't Real"))
+// console.log(toJadenCase("How Can Mirrors Be Real If Our Eyes Aren't Real"))
+
+//23. Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+// function reverseWords(str) {
+//   return str.split(' ').map(function(word){
+//     return word.split('').reverse().join('')
+//   }).join(' ')
+// }
+function reverseWords(str) {
+  return str.split('').reverse().join('').split(' ').reverse().join(' ')
+}
+console.log(reverseWords('double  spaces'))
