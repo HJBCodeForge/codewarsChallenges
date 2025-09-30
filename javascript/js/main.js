@@ -562,11 +562,21 @@
 // There will always be at least one number in the input string.
 // Output string must be two numbers separated by a single space, and highest number is first.
 
-function highAndLow(numbers){
-  let lowestNum = numbers.split(' ').sort(((a,b) => a-b)).shift()
-  let highestNum = numbers.split(' ').sort(((a,b) => a-b)).pop()
-  let highandLow = `${highestNum} ${lowestNum}`
-  return highandLow
+// function highAndLow(numbers){
+//   let lowestNum = numbers.split(' ').sort(((a,b) => a-b)).shift()
+//   let highestNum = numbers.split(' ').sort(((a,b) => a-b)).pop()
+//   let highandLow = `${highestNum} ${lowestNum}`
+//   return highandLow
+// }
+
+// console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+
+//27. Returning Strings. 
+// Create a function that accepts a parameter representing a name and returns the message: "Hello, <name> how are you doing today?".
+//[Make sure you type the exact thing I wrote or the program may not execute properly]
+
+function greet(name){
+  return `Hello, ${name} how are you doing today?`
 }
 
-console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+console.log(greet("Ryan"))
